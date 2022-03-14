@@ -3,4 +3,16 @@ This application lists a list of city with their respective AQI levels.
 City-wise AQI data is fetched from websocket and pushed into Local Database (RealmDB) and then this data will be fetched from DB to load on Listing screen and Graph screens.
 
 
-<b>Installation</b>
+*Installation
+- Clone this Repo <master> branch.
+- Install pods using `pod install`.
+- Run the app.
+
+
+*Testcases
+I have implemented relevant test cases to improve code coverage and fixated UI with data.
+XCTestCase implementation also tests RealmDB changes.
+
+To test the build use 'Command + U' or Run Test build.
+
+To further understand the app architecture: https://docs.google.com/document/d/10idy30G4XEym5yg5_vLm8AxfqUzHXbVOJq4BO-0ZcXk/edit?usp=sharing
