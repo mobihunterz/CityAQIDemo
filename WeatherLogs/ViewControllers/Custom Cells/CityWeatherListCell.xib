@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CityWeatherListCell" customModule="WeatherLogs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Jr8-5L-Cvw">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JTg-5j-R9x">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hy7-oa-vdF">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="23"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amk-Po-tTj">
+                                        <rect key="frame" x="0.0" y="23" width="180" height="77"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-WM-Y8n">
+                                <rect key="frame" x="189" y="0.0" width="61" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTG-bd-cfv">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="100"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" verticalHuggingPriority="255" translatesAutoresizingMaskIntoConstraints="NO" id="aVv-BU-XoA">
+                                        <rect key="frame" x="45" y="3.5" width="16" height="93"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="krN-IX-m5Y"/>
+                                        </constraints>
+                                        <imageReference key="image" image="arrowtriangle.up.fill" catalog="system" symbolScale="small"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Jr8-5L-Cvw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Fg6-MV-Q7u"/>
+                <constraint firstItem="Jr8-5L-Cvw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aQ1-Ll-EKX"/>
+                <constraint firstAttribute="bottom" secondItem="Jr8-5L-Cvw" secondAttribute="bottom" id="cdo-fG-7Ti"/>
+                <constraint firstAttribute="trailing" secondItem="Jr8-5L-Cvw" secondAttribute="trailing" id="dJ1-Zl-izU"/>
+            </constraints>
+            <connections>
+                <outlet property="iconChangeIndicator" destination="aVv-BU-XoA" id="muP-Oj-waf"/>
+                <outlet property="lblAirQuality" destination="QTG-bd-cfv" id="Io2-hd-DMZ"/>
+                <outlet property="lblTitle" destination="Hy7-oa-vdF" id="fT8-lD-lSi"/>
+                <outlet property="lblUpdateTime" destination="Amk-Po-tTj" id="vC8-LJ-oga"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="135"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="arrowtriangle.up.fill" catalog="system" width="128" height="124"/>
+    </resources>
+</document>
